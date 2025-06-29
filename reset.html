@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reset Password</title>
+  <script type="module">
+    import { auth } from './firebase-init.js';
+    import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+    window.onload = () => {
+      document.getElementById("resetForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        try {
+          await sendPasswordResetEmail(auth, email);
+          alert("Reset email sent!");
+        } catch (error) {
+          alert("Reset failed: " + error.message);
+        }
+      });
+    };
+  </script>
+</head>
+<body>
+  <h2>Reset Password</h2>
+  <form id="resetForm">
+    <input type="email" id="email" placeholder="Email" required /><br>
+    <button type="submit">Send Reset Email</button>
+  </form>
+</body>
+</html>
