@@ -1,22 +1,15 @@
 
 <!DOCTYPE html>
-<html>
-<head><title>Watch</title></head>
-<body>
-  <h2>Watch Movie</h2>
-  <p>This movie is only available after payment.</p>
-  <button onclick="simulateMpesa()">Pay with MPESA</button>
-  <div id="video" style="display:none; margin-top: 20px;">
-    <video width="320" height="240" controls>
-      <source src="test-movie.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <script>
-    function simulateMpesa() {
-      alert("Simulating MPESA payment (sandbox mode)...");
-      document.getElementById("video").style.display = "block";
-    }
-  </script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch - AI Movie Site</title>
+</head>
+<body style="background-color:#000;color:white;font-family:sans-serif;text-align:center;padding-top:50px;">
+  <h1>Now Playing: Fast Run</h1>
+  <video width="720" height="400" controls autoplay>
+    <source src="VID-20250628-WA0060.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </body>
 </html>
