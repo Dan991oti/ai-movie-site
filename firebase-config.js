@@ -1,0 +1,1 @@
+export const firebaseConfig = { apiKey: 'XXXX', authDomain: 'XXXX', projectId: 'XXXX' };
